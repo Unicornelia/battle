@@ -1,6 +1,5 @@
 require 'game'
 
-
 feature Game do
 
   subject(:game) { described_class.new(player1, player2) }
@@ -16,7 +15,4 @@ feature Game do
   end
 
   it { is_expected.to respond_to :taking_turns }
-
-
-
 end

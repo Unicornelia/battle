@@ -5,7 +5,7 @@
   <title>
   </title>
 
-  <meta http-equiv="refresh" content="4; URL='/play'"/>
+  <!-- <meta http-equiv="refresh" content="4; URL='/play'"/> -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -15,6 +15,12 @@
   <div>
     <h1> <%= @game.punisher.name.capitalize %> attacked <%= @game.sufferer.name.capitalize %> !! </h1>
     <h1> <%= @game.sufferer.name.capitalize %> : <%= @game.sufferer.hp_points %> </h1>
+  </div>
+
+  <div class="hit_button">
+    <form action='/play' method='get'>
+      <input class="button" type="submit" value="Next">
+    </form>
   </div>
 
 </div>

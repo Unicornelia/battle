@@ -29,6 +29,4 @@ feature Player do
       expect{life.receive_damage}.to change{life.hp_points}.by(-10)
     end
   end
-
-
 end
