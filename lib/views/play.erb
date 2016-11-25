@@ -10,30 +10,32 @@
 
 <body>
 
-<div class="game">
-  <div>
-    <h1> <%= @game.player1.name.capitalize %> </h1>
-  </div>
-  <h1> vs </h1>
-  <div>
-    <h1> <%= @game.player2.name.capitalize %> </h1>
+  <div class="game">
+    <div id="first">
+      <h1> <%= @game.player1.name.capitalize %> </h1>
+      <img src="/css/A.jpg" height="40%" width="40%"></img>
+      <h2> <%= @game.player1.name.capitalize %>: <%= @game.player1.hp_points %> </h2>
+    </div>
+    <h1> vs </h1>
+    <div id="second">
+      <h1> <%= @game.player2.name.capitalize %> </h1>
+      <img src="/css/B.jpg" height="40%" width="40%"></img>
+      <h2> <%= @game.player2.name.capitalize %>: <%= @game.player2.hp_points %> </h2>
+    </div>
+
+    <div class="stat_container">
+      <h2>Who's next? => <%= @game.sufferer.name.capitalize %>'s turn</h2>
+      <div class="hit_button">
+        <form action='/hit' method='get'>
+          <input class="button" type="submit" value="Hit">
+        </form>
+      </div>
+    </div>
+
   </div>
 
-  <div class="hit_button">
-    <form action='/hit' method='get'>
-      <input class="button" type="submit" value="Hit">
-    </form>
-  </div>
 
-  <div>
-    <h2> <%= @game.sufferer.name.capitalize %>'s turn</h2>
-  </div>
 
-  <div>
-    <h2> <%= @game.player1.name.capitalize %>: <%= @game.player1.hp_points %> </h2>
-    <h2> <%= @game.player2.name.capitalize %>: <%= @game.player2.hp_points %> </h2>
-  </div>
-</div>
 
 </body>
 
