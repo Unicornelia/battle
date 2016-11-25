@@ -26,6 +26,11 @@
   </div>
 
   <div class="main">
+    <h2> <%= @game.sufferer.name.capitalize %>'s turn</h2>
+  </div>
+
+  <div class="main">
+    <h2> <%= @game.player1.name.capitalize %>: <%= @game.player1.hp_points %> </h2>
     <h2> <%= @game.player2.name.capitalize %>: <%= @game.player2.hp_points %> </h2>
   </div>
 </body>

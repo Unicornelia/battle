@@ -4,11 +4,6 @@ require 'player'
 
 feature Battle do
 
-
-  let(:anna) { double :anna }
-  let(:hp_points) { double :hp_points }
-
-
   before(:each) do
     sign_in_and_play
   end

@@ -14,4 +14,9 @@ feature Game do
       game.attack(player2)
     end
   end
+
+  it { is_expected.to respond_to :taking_turns }
+
+
+
 end
