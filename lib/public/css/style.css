@@ -13,11 +13,11 @@ h1, h2, h3, h4 {
 img {
   border: dashed #65a9d7 2px;
   border-radius: 20px;
+  size: 50%;
 }
 
 div {
   box-shadow: 2px 2px 2px 2px #000;
-
 }
 
 .button {
@@ -63,7 +63,7 @@ div {
   font-size: 16px;
 }
 
-.input_text {
+.index_page {
   position: absolute;
   top: 10%;
   right: 30%;
@@ -73,6 +73,30 @@ div {
   margin: 20px;
 }
 
+.game {
+  position: absolute;
+  width: 800px;
+  top: 10%;
+  right: 30%;
+  left: 30%;
+  font-size: 18px;
+  padding: 10px;
+  margin: 20px;
+}
+
+
 .main {
   margin: 20px;
+}
+
+.player1 {
+  width: 300px;
+  float: left;
+  height: 200px;
+}
+
+.player2 {
+  width: 300px;
+  float: right;
+  height: 200px;
 }

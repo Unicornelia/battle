@@ -8,12 +8,6 @@ feature Battle do
     sign_in_and_play
   end
 
-  context 'enter names' do
-    it 'filling in the player_1 and player_2 form returns the names' do
-      expect(page).to have_content('A vs B')
-    end
-  end
-
   context 'hitpoints' do
     it 'checks player 2\'s hitpoints' do
       expect(page).to have_content(Player::HP_POINTS)

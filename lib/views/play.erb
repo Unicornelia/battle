@@ -2,8 +2,7 @@
 <html>
 
 <head>
-  <title>
-  </title>
+  <title> Keep hitting!</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -11,6 +10,7 @@
 
 <body>
 
+<div class="game">
   <div>
     <h1> <%= @game.player1.name.capitalize %> </h1>
   </div>
@@ -33,7 +33,7 @@
     <h2> <%= @game.player1.name.capitalize %>: <%= @game.player1.hp_points %> </h2>
     <h2> <%= @game.player2.name.capitalize %>: <%= @game.player2.hp_points %> </h2>
   </div>
-
+</div>
 
 </body>
 
