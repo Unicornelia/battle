@@ -17,6 +17,10 @@
     <h1> <%= @game.sufferer.name.capitalize %> : <%= @game.sufferer.hp_points %> </h1>
   </div>
 
+  <% if @game.sufferer.hp_points <= 0 %>
+    <h1><%= @game.sufferer.name.capitalize %>: you lose </h1>
+  <% end %>
+
   <div class="hit_button">
     <form action='/play' method='get'>
       <input class="button" type="submit" value="Next">

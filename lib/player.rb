@@ -1,6 +1,6 @@
 class Player
 
-HP_POINTS = 100
+HP_POINTS = 20
 
   attr_reader :name, :hp_points
 

@@ -16,7 +16,7 @@ feature Battle do
 
   context 'hitpoints' do
     it 'checks player 2\'s hitpoints' do
-      expect(page).to have_content('B: 100')
+      expect(page).to have_content(Player::HP_POINTS)
     end
 
     it 'returns the confirmation when Hit button gets clicked on' do
