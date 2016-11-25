@@ -1,5 +1,17 @@
 class Game
 
+  @game
+
+  def self.new_game_with_players(player1, player2)
+    @game = Game.new(player1, player2)
+    return @game
+  end
+
+  def self.now
+    @game
+  end
+
+
   attr_reader :player1, :player2, :punisher, :sufferer
 
   def initialize(player1, player2)

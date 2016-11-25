@@ -12,6 +12,39 @@ def sign_in_and_attack_second_turn
   click_button('Hit')
 end
 
-# def sign_in_and_attack_player1_10_times
-#
-# end
+def sign_in_and_destroy
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+  click_button('Next')
+  click_button('Hit')
+end
