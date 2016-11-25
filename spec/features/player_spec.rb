@@ -8,7 +8,6 @@ feature Player do
     sign_in_and_play
   end
 
-
   subject(:anna) { Player.new('Anna') }
   subject(:life) { Player.new('Life') }
 

@@ -12,11 +12,11 @@
 <body>
   <div class="main">
     <div class="col-lg-6">
-      <h1> <%= @player1_name.name.capitalize %> </h1>
+      <h1> <%= @game.player1.name.capitalize %> </h1>
     </div>
     <h1> vs </h1>
     <div class="col-lg-6">
-      <h1> <%= @player2_name.name.capitalize %> </h1>
+      <h1> <%= @game.player2.name.capitalize %> </h1>
     </div>
   </div>
   <div class="hit_button">
@@ -26,7 +26,7 @@
   </div>
 
   <div class="main">
-    <h2> <%= @player2_name.name.capitalize %>: <%= @player2_name.hp_points %> </h2>
+    <h2> <%= @game.player2.name.capitalize %>: <%= @game.player2.hp_points %> </h2>
   </div>
 </body>
 
