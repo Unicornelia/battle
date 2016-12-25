@@ -91,3 +91,8 @@ As a Player,
 So I can enjoy my game of Battle,
 I want a sexy user interface
 ```
+
+# Instructions for running the tests
+1. In terminal/iTerm ```git clone https://github.com/Unicornelia/battle```
+2. ```cd battle```
+3. ```rspec```
