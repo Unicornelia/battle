@@ -1,6 +1,6 @@
 # The project is called 'Battle'.
 
-Interactive game where players can attack eachother and gain or lose points this way.
+Interactive game where players can attack each other and gain or lose points this way.
 
 ![Battle Intro](./images/Battle_start_page.png)
 
@@ -8,14 +8,17 @@ Interactive game where players can attack eachother and gain or lose points this
 Ruby, Sinatra, RSpec, and Capybara
 
 ## How to play?
-1. Sign in with enemy
-2. Slay enemy
-3. Win!
+1. In terminal/iTerm ```git clone https://github.com/Unicornelia/battle```
+2. ```cd battle```
+3. ```ruby lib/app.rb```
+2. Open localhost:4567 in browser
+3. Sign in with 2 players
+4. Take turns and slay
+5. Win!
 
 ## Some 'Basic' User Stories:
 
 ```
-
 As two Players,
 So we can play a personalised game of Battle,
 We want to Start a fight by entering our Names and seeing them
