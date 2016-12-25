@@ -1,6 +1,6 @@
 body {
   font-family: Helvetica;
-  background-image: url('old-paper.jpg');
+  background-image: url('images/old-paper.jpg');
   text-align: center;
   color: white
 }
@@ -55,7 +55,7 @@ div {
   background: #b02a2a;
 }
 
-.text_field {
+input[type='text'] {
   border-color: #65a9d7;
   padding-top: 12px;
   padding-right: 12px;
@@ -63,22 +63,21 @@ div {
   font-size: 16px;
 }
 
-.index_page {
+.index-page {
   position: absolute;
   top: 10%;
-  right: 30%;
-  left: 30%;
+  right: 20%;
+  left: 20%;
   font-size: 18px;
   padding: 10px;
   margin: 20px;
 }
 
 .game {
-  position: absolute;
-  width: 60%;
+  width: 40%;
   top: 10%;
+  left: 30%;
   right: 30%;
-  left: 20%;
   font-size: 18px;
   padding: 10px;
   margin: 20px;
