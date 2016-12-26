@@ -1,6 +1,6 @@
 require 'game'
 
-feature Game do
+describe Game do
 
   subject(:game) { described_class.new(player1, player2) }
 

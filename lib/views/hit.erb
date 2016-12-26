@@ -12,24 +12,26 @@
 <body>
 
   <div class="game">
-    <div>
-      <h1> <%= @game.punisher.name.capitalize %> attacked <%= @game.sufferer.name.capitalize %> !! </h1>
+    <div class='punisher-attacked'>
+      <h1> <%= @game.punisher.name.capitalize %> attacked <%= @game.sufferer.name.capitalize %> ! </h1>
       <h1> <%= @game.sufferer.name.capitalize %> : <%= @game.sufferer.hp_points %> </h1>
+
+      <% if @game.sufferer.hp_points <= 0 %>
+      <h1><%= @game.sufferer.name.capitalize %>: you lose </h1>
+      <img src="/css/images/KO.jpeg"></img>
+      <% else %>
+      <img src="/css/images/fight.jpg"></img>
+      <% end %>
     </div>
 
-    <% if @game.sufferer.hp_points <= 0 %>
-    <h1><%= @game.sufferer.name.capitalize %>: you lose </h1>
-    <img src="/css/KO.jpeg" height="40%" width="40%"></img>
-    <% else %>
-    <img src="/css/fight.jpg" height="40%" width="40%"></img>
-    <% end %>
-
-    <div class="hit_button">
       <form action='/play' method='get'>
-        <input class="button" type="submit" value="Next">
+        <input class="hit-button button" type="submit" value="Next">
       </form>
-    </div>
   </div>
 
+  <footer>
+      <h4>Start again, back <a href='/'>home.</a></h4>
+  </footer>
+  
 </body>
 </html>

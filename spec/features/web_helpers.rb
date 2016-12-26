@@ -13,6 +13,8 @@ def sign_in_and_attack_second_turn
 end
 
 def sign_in_and_destroy
-17.times { click_button('Next')
-  click_button('Hit') }
+  17.times do
+    click_button('Next')
+    click_button('Hit')
+  end
 end
