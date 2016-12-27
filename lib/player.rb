@@ -1,18 +1,16 @@
 class Player
 
-HP_POINTS = 100
+  INITIAL_HP = 100
+  DAMAGE = 10
 
-  attr_reader :name, :hp_points
+  attr_reader :name, :health_points
 
   def initialize(name)
     @name = name
-    @hp_points = HP_POINTS
+    @health_points = INITIAL_HP
   end
 
   def receive_damage
-    @hp_points -= 10
+    @health_points -= DAMAGE
   end
-
-
-
 end
