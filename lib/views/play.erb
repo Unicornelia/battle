@@ -10,27 +10,28 @@
 
 <body>
   <div class="stat-container">
+    <h2>Players take turns in this game, one after another</h2>
     <h2>Who's next? </br> <%= @game.sufferer.name.capitalize %>'s turn</h2>
     <form action='/hit' method='get'>
       <input class="hit_button button" type="submit" value="Hit">
     </form>
   </div>
 
-    <div class='punisher'>
-      <h1> <%= @game.player1.name.capitalize %> </h1>
-      <img src="/css/images/A.jpg"></img>
-      <h2> <%= @game.player1.name.capitalize %>: <%= @game.player1.hp_points %> </h2>
-    </div>
+  <div class='punisher'>
+    <h1> <%= @game.player1.name.capitalize %> </h1>
+    <img src="/css/images/A.jpg"></img>
+    <h2> <%= @game.player1.name.capitalize %>: <%= @game.player1.health_points %> </h2>
+  </div>
 
-    <div class='sufferer'>
-      <h1> <%= @game.player2.name.capitalize %> </h1>
-      <img src="/css/images/B.jpg"></img>
-      <h2> <%= @game.player2.name.capitalize %>: <%= @game.player2.hp_points %> </h2>
-    </div>
+  <div class='sufferer'>
+    <h1> <%= @game.player2.name.capitalize %> </h1>
+    <img src="/css/images/B.jpg"></img>
+    <h2> <%= @game.player2.name.capitalize %>: <%= @game.player2.health_points %> </h2>
+  </div>
 
-<footer>
+  <footer>
     <h4>Start again, back <a href='/'>home.</a></h4>
-</footer>
+  </footer>
 
 </body>
 
