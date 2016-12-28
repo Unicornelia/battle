@@ -1,7 +1,7 @@
 require 'game'
 
 describe Game do
-  # RR - not a feature. This is a unit test; you want a "describe" block here.
+
   subject(:game) { described_class.new(player1, player2) }
 
   let(:player1) { double(:player1) }
