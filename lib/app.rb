@@ -4,7 +4,6 @@ require_relative 'game'
 
 
 class Battle < Sinatra::Base
-
   enable :sessions
 
   get '/' do
@@ -14,20 +13,18 @@ class Battle < Sinatra::Base
   post '/names' do
     player1 = Player.new(params[:player1_name])
     player2 = Player.new(params[:player2_name])
-    @game = Game.new_game_with_players(player1, player2)
+    $game = Game.new(player1, player2)
     redirect '/play'
   end
 
-  before do
-    @game = Game.now
-  end
-
   get '/play' do
+    @game = $game
     erb :play
   end
 
   get '/hit' do
-    @game.attack(@game.punisher)
+    @game = $game
+    @game.attack(@game.player2)
     erb :hit
   end
 

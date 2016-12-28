@@ -14,5 +14,28 @@ describe Game do
     end
   end
 
-  it { is_expected.to respond_to :taking_turns }
+  describe '#player1' do
+    it 'returns the first player' do
+      expect(game.player1).to eq player1
+    end
+  end
+
+  describe '#player2' do
+    it 'returns the second player' do
+      expect(game.player2).to eq player2
+    end
+  end
+
+  describe '#current_turn' do
+    it 'starts as player 1' do
+      expect(game.current_turn).to eq player1
+    end
+  end
+
+  describe '#switch_turns' do
+    it 'switches the players' do
+      game.switching_players
+      expect(game.current_turn).to eq player2
+    end
+  end
 end
