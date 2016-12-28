@@ -1,7 +1,6 @@
 require 'spec_helper'
 require 'player'
 
-
 feature Battle do
 
   before(:each) do
@@ -10,14 +9,12 @@ feature Battle do
 
   context 'hitpoints' do
     it 'checks player 2\'s hitpoints' do
-      expect(page).to have_content(Player::HP_POINTS)
+      expect(page).to have_content(Player::INITIAL_HP)
     end
 
     it 'returns the confirmation when Hit button gets clicked on' do
       click_button('Hit')
       expect(page).to have_content('A attacked B')
     end
-
-
   end
 end
