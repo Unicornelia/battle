@@ -1,17 +1,8 @@
 require 'spec_helper'
 
-feature "Switch turns" do
-  context 'seeing the current turn' do
-    scenario 'at the start of the game' do
-      sign_in_and_play
-      expect(page).to have_content "A's turn"
-    end
-
-    scenario 'after player 1 attacks' do
-      sign_in_and_attack_second_turn
-      click_button 'Next'
-      expect(page).not_to have_content 'B\'s turn'
-      expect(page).to have_content 'A\'s turn'
-    end
+feature "Switch turns", :type => :feature do
+  scenario "player being attacked changes" do
+    sign_in_and_attack_second_turn
+    expect(page).to have_content("B attacked A")
   end
 end

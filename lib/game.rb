@@ -1,38 +1,39 @@
 class Game
 
-  attr_reader :current_turn
+  @game
+
+  def self.new_game_with_players(player1, player2)
+    @game = Game.new(player1, player2)
+    return @game
+  end
+
+  def self.now
+    @game
+  end
+
+
+  attr_reader :player1, :player2, :punisher, :sufferer
 
   def initialize(player1, player2)
-    @players = [player1, player2]
-    @current_turn = player1
+    @player1 = player1
+    @player2 = player2
+    @punisher = @player2
+    @sufferer = @player1
   end
 
-  def player1
-    @players.first
+  def attack(player)
+    player.receive_damage
+    taking_turns
   end
 
-  def player2
-    @players.last
-  end
-
-  def attack(player1)
-    player2.receive_damage
-    switching_players
-  end
-
-  def switching_players
-    @current_turn = opponent_of(current_turn)
-  end
-
-  def opponent_of(player)
-    players_who_are_not(player).first
-  end
-
-  private
-  attr_reader :players
-
-  def opponent_of(the_player)
-    @players.select { |player| player != the_player }.first
+  def taking_turns
+    if @punisher == @player1
+      @punisher = @player2
+      @sufferer = @player1
+    else
+      @punisher = @player1
+      @sufferer = @player2
+    end
   end
 
 end

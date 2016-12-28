@@ -12,11 +12,11 @@
 
   <div class="game">
     <div class='punisher-attacked'>
-      <h1> <%= @game.player1.name.capitalize %> attacked <%= @game.player2.name.capitalize %> ! </h1>
-      <h1> <%= @game.player2.name.capitalize %> : <%= @game.player2.health_points %> </h1>
+      <h1> <%= @game.punisher.name.capitalize %> attacked <%= @game.sufferer.name.capitalize %> ! </h1>
+      <h1> <%= @game.sufferer.name.capitalize %> : <%= @game.sufferer.health_points %> </h1>
 
-      <% if @game.player2.health_points <= 0 %>
-      <h1><%= @game.player2.name.capitalize %>: you lose </h1>
+      <% if @game.sufferer.health_points <= 0 %>
+      <h1><%= @game.sufferer.name.capitalize %>: you lose </h1>
       <img src="/css/images/KO.jpeg"></img>
       <% else %>
       <img src="/css/images/fight.jpg"></img>

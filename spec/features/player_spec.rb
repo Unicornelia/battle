@@ -19,14 +19,14 @@ feature Player do
 
   describe '#hp_points' do
     it 'checks that player has HP points' do
-      expect(anna.health_points).to eq described_class::INITIAL_HP
+      expect(anna.hp_points).to eq described_class::HP_POINTS
     end
   end
 
   describe '#receive_damage' do
     it 'an attack reduces playes2\'s HP points by 10' do
       click_button('Hit')
-      expect{life.receive_damage}.to change{life.health_points}.by(-10)
+      expect{life.receive_damage}.to change{life.hp_points}.by(-10)
     end
   end
 end
