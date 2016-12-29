@@ -1,20 +1,16 @@
 class Game
 
-  @game
-
   def self.new_game_with_players(player1, player2)
     @game = Game.new(player1, player2)
-    #RR - no need for this method. You already have "initialize" with player args
     @game
   end
 
   def self.now
     @game
-    # RR - replace with attr_reader
   end
 
 
-  attr_reader :player1, :player2, :punisher, :sufferer
+  attr_reader :game, :player1, :player2, :punisher, :sufferer
   # RR - do these really need to be exposed? Where are they used outside of Game?
 
   def initialize(player1, player2)
@@ -30,10 +26,10 @@ class Game
 
   def attack(player)
     player.receive_damage
-    taking_turns
+    switch_players
   end
 
-  def taking_turns
+  def switch_players
     # RR - can you think of a more semantic name for this method?
     # ideally we want a verb that tells us exactly what's going on
     # e.g. "switch players"

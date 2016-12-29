@@ -14,7 +14,9 @@ describe Game do
     end
   end
 
-  it { is_expected.to respond_to :taking_turns }
+  describe '#switch_players' do
+    it { is_expected.to respond_to :switch_players }
+  end
   # RR - how useful is this test? We're checking that the method taking_turns
   # exists in the Game class, but for all we know it prints out "POTATOPOTATOPOTATO"
 
