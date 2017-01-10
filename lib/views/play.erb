@@ -10,6 +10,7 @@
 
 <body>
   <div class="stat-container">
+    <h3> <%= @game.player1.name %> vs. <%= @game.player2.name %></h3>
     <h2>Players take turns in this game, one after another</h2>
     <h2>Who's next? </br> <%= @game.sufferer.name.capitalize %>'s turn</h2>
     <form action='/hit' method='get'>
